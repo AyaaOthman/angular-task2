@@ -1,0 +1,15 @@
+<div class="row d-flex justify-content-center my-3">
+  <h3>Active User:{{ userName }}</h3>
+  <div class="card-group">
+    <div *ngFor="let user of data">
+      <ng-container *ngIf="!searchedEmail || searchedEmail === user.email">
+        <div>
+          <app-user-card
+            [user]="user"
+            (sendUserName)="reciveUserName($event)"
+          ></app-user-card>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>

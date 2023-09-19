@@ -1,0 +1,13 @@
+<div class="d-flex justify-content-center">
+  <input
+    type="text"
+    class="form-control mx-2"
+    aria-label="Default"
+    aria-describedby="inputGroup-sizing-default"
+    placeholder="email"
+    [(ngModel)]="searchValue"
+  />
+  <button type="button" class="btn btn-dark" (click)="searchUsers(searchValue)">
+    {{ btnName }}
+  </button>
+</div>
